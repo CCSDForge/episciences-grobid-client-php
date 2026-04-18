@@ -13,8 +13,26 @@ GROBID converts technical and scientific documents (PDF) into structured TEI XML
 
 ## Installation
 
+As the package is not yet published on Packagist, you can install it by adding the repository to your `composer.json`:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/CCSDForge/episciences-grobid-client-php"
+        }
+    ],
+    "require": {
+        "episciences/grobid-client-php": "dev-main"
+    }
+}
+```
+
+Then run:
+
 ```bash
-composer require episciences/grobid-client-php
+composer update episciences/grobid-client-php
 ```
 
 ## Quick start
