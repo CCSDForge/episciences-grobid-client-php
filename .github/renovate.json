@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    "group:monolog"
+  ],
+  "php": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["symfony/*"],
+      "groupName": "symfony packages"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
+}
