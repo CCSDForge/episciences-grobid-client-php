@@ -51,7 +51,7 @@ jobs:
         run: vendor/bin/phpunit --testsuite unit --coverage-clover coverage.xml
 
       - name: Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v6
         if: matrix.php == '8.2' && matrix.dependency-version == 'prefer-stable'
         with:
           files: coverage.xml
