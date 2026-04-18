@@ -1,5 +1,10 @@
 # grobid-client-php
 
+[![CI](https://github.com/CCSDForge/episciences-grobid-client-php/actions/workflows/ci.yml/badge.svg)](https://github.com/CCSDForge/episciences-grobid-client-php/actions/workflows/ci.yml)
+[![Latest Stable Version](https://poser.pugx.org/episciences/grobid-client-php/v/stable)](https://packagist.org/packages/episciences/grobid-client-php)
+[![License](https://poser.pugx.org/episciences/grobid-client-php/license)](https://packagist.org/packages/episciences/grobid-client-php)
+[![PHP Version Require](https://poser.pugx.org/episciences/grobid-client-php/require/php)](https://packagist.org/packages/episciences/grobid-client-php)
+
 PHP 8.1+ client library for the [GROBID](https://github.com/grobidOrg/grobid) REST API.
 
 GROBID converts technical and scientific documents (PDF) into structured TEI XML, extracting full text, metadata, references, citations, and more.
