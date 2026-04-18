@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Episciences\GrobidClient\Command\ProcessCommand;
+use Symfony\Component\Console\Application;
+
+$autoloadPaths = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',  // when installed as a dependency
+];
+
+$autoloaded = false;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        require_once $path;
+        $autoloaded = true;
+        break;
+    }
+}
+
+if (!$autoloaded) {
+    fwrite(STDERR, "Autoloader not found. Run 'composer install' first.\n");
+    exit(1);
+}
+
+$app = new Application('grobid-client', '1.0.0');
+$app->add(new ProcessCommand());
+$app->setDefaultCommand('grobid:process', true);
+$app->run();
