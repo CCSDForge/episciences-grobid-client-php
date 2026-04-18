@@ -13,7 +13,6 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
 final class ProcessCommandTest extends TestCase
@@ -56,10 +55,6 @@ final class ProcessCommandTest extends TestCase
 
         $grobidClient = new GrobidClient($config, checkServer: false, apiClient: $apiClient);
         $command      = new ProcessCommand($grobidClient);
-
-        $app = new Application();
-        $app->add($command);
-        $app->setDefaultCommand($command->getName() ?? 'grobid:process', true);
 
         return new CommandTester($command);
     }
