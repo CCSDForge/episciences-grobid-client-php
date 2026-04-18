@@ -3,8 +3,7 @@
   "extends": [
     "config:recommended",
     ":separateMajorReleases",
-    ":combinePatchMinorReleases",
-    "group:monolog"
+    ":combinePatchMinorReleases"
   ],
   "php": {
     "enabled": true
