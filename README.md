@@ -1,6 +1,8 @@
 # grobid-client-php
 
 [![CI](https://github.com/CCSDForge/episciences-grobid-client-php/actions/workflows/ci.yml/badge.svg)](https://github.com/CCSDForge/episciences-grobid-client-php/actions/workflows/ci.yml)
+![PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-8892bf.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 PHP 8.1+ client library for the [GROBID](https://github.com/grobidOrg/grobid) REST API.
 
